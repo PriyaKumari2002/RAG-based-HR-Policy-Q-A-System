@@ -328,7 +328,7 @@ Groq LLaMA 3.1 8B generates a structured, concise answer with section references
 
 ---
 
-## 📄 Resume-Worthy Points
+## 📄Important Points
 
 - Designed and deployed an end-to-end **RAG pipeline** for HR policy Q&A using **LangChain, FAISS, and Groq LLaMA 3**, enabling semantic search over PDF documents with source-level traceability
 - Implemented **document chunking** (chunk_size=500, overlap=50) and **HuggingFace embeddings** (`all-MiniLM-L6-v2`) generating 198 vectors stored in **FAISS** for sub-second retrieval
@@ -336,31 +336,6 @@ Groq LLaMA 3.1 8B generates a structured, concise answer with section references
 - Developed **production-ready REST API** using **FastAPI** with Pydantic validation, structured logging, error handling, and auto-generated Swagger documentation
 - Created interactive **Streamlit frontend** with semantic search, source citation, and page-level traceability for non-technical end users
 - Resolved real-world **LangChain dependency conflicts** and cross-environment path issues between Jupyter development and FastAPI production environments
-
----
-
-## 🎤 Interview Q&A
-
-**Q: What is RAG?**
-> RAG (Retrieval-Augmented Generation) combines a retrieval system with an LLM. Instead of relying on the model's training data, it fetches relevant context from a document store and passes it to the LLM — making answers accurate, current, and traceable.
-
-**Q: Why RAG over fine-tuning?**
-> Fine-tuning is expensive, requires retraining when documents update, and can still hallucinate. RAG keeps the LLM frozen and retrieves live context — cheaper, updatable, and auditable. Critical in regulated domains like HR and BFSI.
-
-**Q: Why chunking?**
-> LLMs have a limited context window. Chunking splits large documents into smaller pieces so only the relevant portion is passed to the LLM — reducing cost and improving accuracy.
-
-**Q: Why embeddings?**
-> Embeddings convert text into numerical vectors where semantic similarity = vector proximity. This enables meaning-based search — "vacation rules" matches "leave policy" even without exact keywords.
-
-**Q: Why FAISS?**
-> FAISS is Facebook's open-source vector similarity search library. It's fast, local, and perfect for prototype/mid-scale projects. No cloud dependency, no cost.
-
-**Q: Why FastAPI over Flask?**
-> FastAPI auto-generates API documentation, has built-in Pydantic validation, supports async natively, and is significantly faster than Flask — making it the industry standard for ML/AI APIs.
-
-**Q: How do you prevent hallucination?**
-> Prompt engineering — the system prompt explicitly instructs the LLM to answer ONLY from the provided context. If information isn't in the retrieved chunks, it says so rather than guessing.
 
 ---
 
@@ -402,12 +377,6 @@ Contributions are welcome!
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 👩‍💻 Author
 
 **Priya Kumari**
@@ -425,18 +394,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 - [FastAPI](https://fastapi.tiangolo.com) — Modern Python API framework
 - [Streamlit](https://streamlit.io) — Rapid UI development
 - [Doctors For You](https://doctorsforyou.org) — HR policy document
-
----
-
-## 📸 Screenshots to Add
-
-Replace these placeholders with actual screenshots:
-
-1. `screenshots/ui_home.png` — Streamlit home page
-2. `screenshots/ui_answer.png` — Answer with sources
-3. `screenshots/api_swagger.png` — FastAPI Swagger docs
-4. `screenshots/architecture.png` — Pipeline diagram
-
 
 ---
 
